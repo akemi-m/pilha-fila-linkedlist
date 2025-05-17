@@ -25,7 +25,7 @@ public class Util {
       servidores.push(carga);
     }
 
-    System.out.println(servidores);
+    System.out.println("Dia 0: " + servidores);
 
     int dias = 0;
     boolean existeCargaMaior = true;
@@ -60,14 +60,19 @@ public class Util {
       }
 
       dias++;
+      System.out.println("\nDia " + dias + ":");
+      System.out.println("Após desligamentos: " + servidores);
     }
 
+    System.out
+        .println("\nNão há mais servidor com carga maior que o servidor à sua esquerda, portanto, o processo termina.");
+
     if (dias == 0) {
-      System.out.println("Nenhum dia até que nenhum servidor mais seja desligado.");
+      System.out.println("\nNenhum dia até que nenhum servidor mais seja desligado.");
     } else if (dias == 1) {
-      System.out.println(1 + " dia até que nenhum servidor mais seja desligado.");
+      System.out.println("\n" + 1 + " dia até que nenhum servidor mais seja desligado.");
     } else {
-      System.out.println(dias + " dias até que nenhum servidor mais seja desligado.");
+      System.out.println("\n" + dias + " dias até que nenhum servidor mais seja desligado.");
     }
   }
 }
