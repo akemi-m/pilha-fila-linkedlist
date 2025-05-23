@@ -4,11 +4,12 @@ import java.util.LinkedList;
 
 public class Util {
 
-  public void intercalarListas(LinkedList<Integer> lista1, LinkedList<Integer> lista2) {
+  public LinkedList<Integer> intercalarListas(LinkedList<Integer> lista1, LinkedList<Integer> lista2) {
 
     if (verificarListas(lista1, lista2) == false) {
-      System.out.println("Os números das listas devem estar em ordem crescente.");
-      return;
+      System.out.println(
+          "Erro: os números das listas devem estar em ordem crescente, então a nova ficou triste e vazia :(");
+      return new LinkedList<>();
     }
 
     LinkedList<Integer> aux = new LinkedList<Integer>();
@@ -35,7 +36,7 @@ public class Util {
     while (!lista1.isEmpty()) {
       aux.add(lista1.removeFirst());
     }
-    System.out.println(aux);
+    return aux;
   }
 
   public boolean verificarListas(LinkedList<Integer> lista1, LinkedList<Integer> lista2) {

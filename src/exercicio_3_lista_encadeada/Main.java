@@ -38,6 +38,6 @@ public class Main {
 
     in.close();
 
-    new Util().intercalarListas(lista1, lista2);
+    System.out.println(new Util().intercalarListas(lista1, lista2));
   }
 }
